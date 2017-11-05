@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Question 1 - The Diet -->
+    <string name="diet">What is your diet like?</string>
+
+    <string-array name="diet_answers">
+        <item>I only eat meat</item>
+        <item>I only eat plants</item>
+        <item>I eat both plants and meat</item>
+        <item>I like fish</item>
+        <item>I like bamboo</item>
+    </string-array>
+
+    <integer-array name="meat_eaters">
+        <item>@integer/cat</item>
+        <item>@integer/tiger</item>
+    </integer-array>
+
+    <integer-array name="plant_eaters">
+        <item>@integer/giraffe</item>
+        <item>@integer/horse</item>
+    </integer-array>
+
+    <integer-array name="plant_meat">
+        <item>@integer/bear</item>
+        <item>@integer/dog</item>
+        <item>@integer/elephant</item>
+        <item>@integer/monkey</item>
+    </integer-array>
+
+    <integer-array name="fish">
+        <item>@integer/dolphine</item>
+    </integer-array>
+
+    <integer-array name="bamboo">
+        <item>@integer/red_panda</item>
+    </integer-array>
+
+    <array name="diet_map">
+        <item>@array/meat_eaters</item>
+        <item>@array/plant_eaters</item>
+        <item>@array/plant_meat</item>
+        <item>@array/fish</item>
+        <item>@array/bamboo</item>
+    </array>
+
+    <array name="diet_question">
+        <item>@string/diet</item>
+        <item>@array/diet_answers</item>
+        <item>@array/diet_map</item>
+    </array>
+
+    <!-- Question 2 - Swimming -->
+    <string name="swimming">Do you like to swim?</string>
+
+    <string-array name="swim_answers">
+        <item>I\'m always in the water</item>
+        <item>It is a great way to cool off</item>
+        <item>Will swim when needed</item>
+        <item>I\'m not known to swim often</item>
+        <item>Don\'t throw me in!</item>
+    </string-array>
+
+    <integer-array name="sea_creature">
+        <item>@integer/dolphine</item>
+    </integer-array>
+
+    <integer-array name="cool">
+        <item>@integer/elephant</item>
+        <item>@integer/tiger</item>
+    </integer-array>
+
+    <integer-array name="swimmer">
+        <item>@integer/bear</item>
+        <item>@integer/dog</item>
+        <item>@integer/giraffe</item>
+        <item>@integer/horse</item>
+    </integer-array>
+
+    <integer-array name="infrequent">
+        <item>@integer/monkey</item>
+        <item>@integer/red_panda</item>
+    </integer-array>
+
+    <integer-array name="yikes">
+        <item>@integer/cat</item>
+    </integer-array>
+
+    <array name="swim_map">
+        <item>@array/sea_creature</item>
+        <item>@array/cool</item>
+        <item>@array/swimmer</item>
+        <item>@array/infrequent</item>
+        <item>@array/yikes</item>
+    </array>
+
+    <array name="swim_question">
+        <item>@string/swimming</item>
+        <item>@array/swim_answers</item>
+        <item>@array/swim_map</item>
+    </array>
+
+    <!-- Question 3 - How Fast -->
+    <string name="speed">How fast are you?</string>
+
+    <string-array name="speed_answers">
+        <item>I like to race</item>
+        <item>I can be quick</item>
+        <item>I can be faster than you would think</item>
+        <item>I prefer a slower pace</item>
+        <item>I\'m a great swimmer</item>
+    </string-array>
+
+    <integer-array name="racer">
+        <item>@integer/horse</item>
+    </integer-array>
+
+    <integer-array name="fast">
+        <item>@integer/cat</item>
+        <item>@integer/dog</item>
+        <item>@integer/giraffe</item>
+        <item>@integer/tiger</item>
+    </integer-array>
+
+    <integer-array name="quick">
+        <item>@integer/bear</item>
+        <item>@integer/elephant</item>
+        <item>@integer/monkey</item>
+    </integer-array>
+
+    <integer-array name="slow">
+        <item>@integer/red_panda</item>
+    </integer-array>
+
+    <integer-array name="splash">
+        <item>@integer/dolphine</item>
+    </integer-array>
+
+    <array name="speed_map">
+        <item>@array/racer</item>
+        <item>@array/fast</item>
+        <item>@array/quick</item>
+        <item>@array/slow</item>
+        <item>@array/splash</item>
+    </array>
+
+    <array name="speed_question">
+        <item>@string/speed</item>
+        <item>@array/speed_answers</item>
+        <item>@array/speed_map</item>
+    </array>
+
+    <!-- Question 4 - Relative Size -->
+    <string name="relative_size">Your overall size is…</string>
+
+    <string-array name="relative_size_answers">
+        <item>Extra large</item>
+        <item>Large</item>
+        <item>Medium Large</item>
+        <item>Meduum</item>
+        <item>Small</item>
+    </string-array>
+
+    <integer-array name="xlarge">
+        <item>@integer/elephant</item>
+    </integer-array>
+
+    <integer-array name="large">
+        <item>@integer/giraffe</item>
+        <item>@integer/horse</item>
+    </integer-array>
+
+    <integer-array name="med_large">
+        <item>@integer/tiger</item>
+    </integer-array>
+
+    <integer-array name="medium">
+        <item>@integer/dog</item>
+        <item>@integer/monkey</item>
+        <item>@integer/dolphine</item>
+    </integer-array>
+
+    <integer-array name="small">
+        <item>@integer/cat</item>
+        <item>@integer/red_panda</item>
+    </integer-array>
+
+    <array name="relative_size_map">
+        <item>@array/xlarge</item>
+        <item>@array/large</item>
+        <item>@array/med_large</item>
+        <item>@array/medium</item>
+        <item>@array/small</item>
+    </array>
+
+    <array name="relative_size_question">
+        <item>@string/relative_size</item>
+        <item>@array/relative_size_answers</item>
+        <item>@array/relative_size_map</item>
+    </array>
+
+    <!-- Question 5 - Dimensional Size -->
+    <string name="dimensional_size">Your primary size dimension is …</string>
+
+    <string-array name="dimensional_size_answers">
+        <item>Less than 1 foot high</item>
+        <item>1 to 5 feet high</item>
+        <item>6 to 10 feet high</item>
+        <item>Over 10 feet high</item>
+        <item>Around 8 feet long</item>
+    </string-array>
+
+    <integer-array name="short_height">
+        <item>@integer/cat</item>
+        <item>@integer/red_panda</item>
+    </integer-array>
+
+    <integer-array name="medium_height">
+        <item>@integer/dog</item>
+        <item>@integer/bear</item>
+        <item>@integer/horse</item>
+        <item>@integer/monkey</item>
+        <item>@integer/tiger</item>
+    </integer-array>
+
+    <integer-array name="tall">
+        <item>@integer/elephant</item>
+    </integer-array>
+
+    <integer-array name="super_tall">
+        <item>@integer/giraffe</item>
+    </integer-array>
+
+    <integer-array name="length">
+        <item>@integer/dolphine</item>
+    </integer-array>
+
+    <array name="dimensional_size_map">
+        <item>@array/short_height</item>
+        <item>@array/medium_height</item>
+        <item>@array/tall</item>
+        <item>@array/super_tall</item>
+        <item>@array/length</item>
+    </array>
+
+    <array name="dimensional_size_question">
+        <item>@string/dimensional_size</item>
+        <item>@array/dimensional_size_answers</item>
+        <item>@array/dimensional_size_map</item>
+    </array>
+
+    <!-- Question 7 - Sleep Habits -->
+    <string name="sleep">You like to sleep for …</string>
+
+    <string-array name="sleep_answers">
+        <item>Through the winter</item>
+        <item>Few hours a day</item>
+        <item>Around 10 hours a day</item>
+        <item>Around 15 hours a day</item>
+        <item>Close to 20 hours a day</item>
+    </string-array>
+
+    <integer-array name="hibernate">
+        <item>@integer/bear</item>
+    </integer-array>
+
+    <integer-array name="light_sleeper">
+        <item>@integer/elephant</item>
+        <item>@integer/giraffe</item>
+        <item>@integer/horse</item>
+    </integer-array>
+
+    <integer-array name="medium_sleeper">
+        <item>@integer/cat</item>
+        <item>@integer/dog</item>
+        <item>@integer/dolphine</item>
+        <item>@integer/monkey</item>
+    </integer-array>
+
+    <integer-array name="heavy_sleeper">
+        <item>@integer/red_panda</item>
+    </integer-array>
+
+    <integer-array name="super_snoozer">
+        <item>@integer/tiger</item>
+    </integer-array>
+
+    <array name="sleep_map">
+        <item>@array/hibernate</item>
+        <item>@array/light_sleeper</item>
+        <item>@array/medium_sleeper</item>
+        <item>@array/heavy_sleeper</item>
+        <item>@array/super_snoozer</item>
+    </array>
+
+    <array name="sleep_question">
+        <item>@string/sleep</item>
+        <item>@array/sleep_answers</item>
+        <item>@array/sleep_map</item>
+    </array>
+
+    <!-- Question 7 - Roaming -->
+    <string name="roaming">You like to roam …</string>
+
+    <string-array name="roaming_answers">
+        <item>In a pasture</item>
+        <item>In my territory</item>
+        <item>In a vast area</item>
+        <item>A short distance a day</item>
+        <item>Whatever it takes to find food and water</item>
+    </string-array>
+
+    <integer-array name="pasture_dweller">
+        <item>@integer/horse</item>
+    </integer-array>
+
+    <integer-array name="territorial">
+        <item>@integer/bear</item>
+        <item>@integer/cat</item>
+        <item>@integer/dog</item>
+        <item>@integer/tiger</item>
+    </integer-array>
+
+    <integer-array name="vast_area">
+        <item>@integer/dolphine</item>
+        <item>@integer/giraffe</item>
+    </integer-array>
+
+    <integer-array name="short_distance">
+        <item>@integer/monkey</item>
+        <item>@integer/red_panda</item>
+    </integer-array>
+
+    <integer-array name="long_distance">
+        <item>@integer/elephant</item>
+    </integer-array>
+
+    <array name="roaming_map">
+        <item>@array/pasture_dweller</item>
+        <item>@array/territorial</item>
+        <item>@array/vast_area</item>
+        <item>@array/short_distance</item>
+        <item>@array/long_distance</item>
+    </array>
+
+    <array name="roaming_question">
+        <item>@string/roaming</item>
+        <item>@array/roaming_answers</item>
+        <item>@array/roaming_map</item>
+    </array>
+
+    <!-- Quesiton 8 - Environment -->
+    <string name="environment">Your favorite environment is …</string>
+
+    <string-array name="environment_answers">
+        <item>Somewhere on land</item>
+        <item>Somewhere close to water</item>
+        <item>In the ocean</item>
+        <item>In a tree</item>
+        <item>Land with a house, stable or barn</item>
+    </string-array>
+    .
+    <integer-array name="land">
+        <item>@integer/bear</item>
+        <item>@integer/giraffe</item>
+        <item>@integer/tiger</item>
+    </integer-array>
+
+    <integer-array name="with_water">
+        <item>@integer/elephant</item>
+    </integer-array>
+
+    <integer-array name="tree">
+        <item>@integer/monkey</item>
+        <item>@integer/red_panda</item>
+    </integer-array>
+
+    <integer-array name="domestic">
+        <item>@integer/cat</item>
+        <item>@integer/dog</item>
+        <item>@integer/horse</item>
+    </integer-array>
+
+    <integer-array name="in_ocean">
+        <item>@integer/dolphine</item>
+    </integer-array>
+
+    <array name="environment_map">
+        <item>@array/land</item>
+        <item>@array/with_water</item>
+        <item>@array/in_ocean</item>
+        <item>@array/tree</item>
+        <item>@array/domestic</item>
+    </array>
+
+    <array name="environment_question">
+        <item>@string/environment</item>
+        <item>@array/environment_answers</item>
+        <item>@array/environment_map</item>
+    </array>
+
+    <!-- The Question Data -->
+    <array name="questions">
+        <item>@array/diet_question</item>
+        <item>@array/swim_question</item>
+        <item>@array/speed_question</item>
+        <item>@array/relative_size_question</item>
+        <item>@array/dimensional_size_question</item>
+        <item>@array/sleep_question</item>
+        <item>@array/roaming_question</item>
+        <item>@array/environment_question</item>
+    </array>
+
+</resources>

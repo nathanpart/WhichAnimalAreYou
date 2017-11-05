@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    This file is the database for the "You are a.." application.
+
+    The idea is that one can create many various "You are a..." applications just by changing what
+    is in this file.
+
+    The ccde in the data module just references two arrays with the id "questions", and the id "results_data".
+
+    The "questons" is an array where each entry is an array of question components.  The question
+    component array has three items,  Question string resource,  Array of answer strings for the spin
+    controlls, and Array that maps answers to the results.
+
+    The "results_data" is an array of result items where each entry is an array that lists the resources
+    needed to present the given item if it is the selected result.
+    -->
+
+    <!-- Bear -->
+    <string name="bear_label">bear</string>
+    <dimen name="bear_x">0dp</dimen>
+    <dimen name="bear_y">0dp</dimen>
+    <array name="the_bear">
+        <item>@string/bear_label</item>
+        <item>@drawable/bear</item>
+        <item>@raw/bear</item>
+        <item>@dimen/bear_x</item>
+        <item>@dimen/bear_y</item>
+    </array>
+
+    <!-- Cat -->
+    <string name="cat_label">cat</string>
+    <dimen name="cat_x">0dp</dimen>
+    <dimen name="cat_y">0dp</dimen>
+    <array name="the_cat">
+        <item>@string/cat_label</item>
+        <item>@drawable/cat</item>
+        <item>@raw/cat</item>
+        <item>@dimen/cat_x</item>
+        <item>@dimen/cat_y</item>
+    </array>
+
+    <!-- Dog -->
+    <string name="dog_label">dog</string>
+    <dimen name="dog_x">0dp</dimen>
+    <dimen name="dog_y">0dp</dimen>
+    <array name="the_dog">
+        <item>@string/dog_label</item>
+        <item>@drawable/dog</item>
+        <item>@raw/dog</item>
+        <item>@dimen/dog_x</item>
+        <item>@dimen/dog_y</item>
+    </array>
+
+    <!-- Dolphin -->
+    <string name="dolphin_label">dolphine</string>
+    <dimen name="dolphin_x">0dp</dimen>
+    <dimen name="dolphin_y">0dp</dimen>
+    <array name="the_dolphin">
+        <item>@string/dolphin_label</item>
+        <item>@drawable/dolphin</item>
+        <item>@raw/dolphin</item>
+        <item>@dimen/dolphin_x</item>
+        <item>@dimen/dolphin_y</item>
+    </array>
+
+    <!-- Elephant -->
+    <string name="elephant_label">elephant</string>
+    <dimen name="elephant_x">0dp</dimen>
+    <dimen name="elephant_y">0dp</dimen>
+    <array name="the_elephant">
+        <item>@string/elephant_label</item>
+        <item>@drawable/elephant</item>
+        <item>@raw/elephant</item>
+        <item>@dimen/elephant_x</item>
+        <item>@dimen/elephant_y</item>
+    </array>
+
+    <!-- Giraffe -->
+    <string name="giraffe_label">giraffe</string>
+    <dimen name="giraffe_x">0dp</dimen>
+    <dimen name="giraffe_y">0dp</dimen>
+    <array name="the_giraffe">
+        <item>@string/giraffe_label</item>
+        <item>@drawable/giraffe</item>
+        <item>@null</item>
+        <item>@dimen/giraffe_x</item>
+        <item>@dimen/giraffe_y</item>
+    </array>
+
+    <!-- Horse -->
+    <string name="horse_label">horse</string>
+    <dimen name="horse_x">0dp</dimen>
+    <dimen name="horse_y">0dp</dimen>
+    <array name="the_horse">
+        <item>@string/horse_label</item>
+        <item>@drawable/horse</item>
+        <item>@raw/horse</item>
+        <item>@dimen/horse_x</item>
+        <item>@dimen/horse_y</item>
+    </array>
+
+    <!-- Monkey -->
+    <string name="monkey_label">monkey</string>
+    <dimen name="monkey_x">0dp</dimen>
+    <dimen name="monkey_y">0dp</dimen>
+    <array name="the_monkey">
+        <item>@string/monkey_label</item>
+        <item>@drawable/monkey</item>
+        <item>@raw/monkey</item>
+        <item>@dimen/monkey_x</item>
+        <item>@dimen/monkey_y</item>
+    </array>
+
+    <!-- Red Panda -->
+    <string name="red_panda_label">red panda</string>
+    <dimen name="red_panda_x">0dp</dimen>
+    <dimen name="red_panda_y">0dp</dimen>
+    <array name="the_red_panda">
+        <item>@string/red_panda_label</item>
+        <item>@drawable/redpanda</item>
+        <item>@raw/red_panda</item>
+        <item>@dimen/red_panda_x</item>
+        <item>@dimen/red_panda_y</item>
+    </array>
+
+    <!-- Tiger -->
+    <string name="tiger_label">tiger</string>
+    <dimen name="tiger_x">0dp</dimen>
+    <dimen name="tiger_y">0dp</dimen>
+    <array name="the_tiger">
+        <item>@string/tiger_label</item>
+        <item>@drawable/tiger</item>
+        <item>@raw/tiger</item>
+        <item>@dimen/tiger_x</item>
+        <item>@dimen/tiger_y</item>
+    </array>
+
+    <!-- Animal reference indexes -->
+    <integer name="bear">0</integer>
+    <integer name="cat">1</integer>
+    <integer name="dog">2</integer>
+    <integer name="dolphine">3</integer>
+    <integer name="elephant">4</integer>
+    <integer name="giraffe">5</integer>
+    <integer name="horse">6</integer>
+    <integer name="monkey">7</integer>
+    <integer name="red_panda">8</integer>
+    <integer name="tiger">9</integer>
+
+
+    <!-- The Results Data -->
+    <array name="charaters">
+        <item>@array/the_bear</item>
+        <item>@array/the_cat</item>
+        <item>@array/the_dog</item>
+        <item>@array/the_dolphin</item>
+        <item>@array/the_elephant</item>
+        <item>@array/the_giraffe</item>
+        <item>@array/the_horse</item>
+        <item>@array/the_monkey</item>
+        <item>@array/the_red_panda</item>
+        <item>@array/the_tiger</item>
+    </array>
+
+</resources>
