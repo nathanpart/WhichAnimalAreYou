@@ -5,39 +5,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="partridge.nathan.whichanimalareyou.ui.MainActivity">
+    android:background="#18b64a"
+    tools:context="partridge.nathan.whichanimalareyou.ui.activities.MainActivity">
+
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bear"
+        android:tint="#D018b64a"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/cat"/>
+        app:layout_constraintVertical_bias="1.0"/>
 
-    <partridge.nathan.whichanimalareyou.TextViewOutline
-        android:id="@+id/textView"
+    <TextView
+        android:id="@+id/introMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        android:text="We are hungry.  Anyone got some mice for us? "
-        android:textColor="@android:color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="@string/intro_msg"
+        android:textColor="#ffffffff"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:outlineColor="@android:color/black"
-        app:outlineSize="3dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/captionText"/>
+
+    <EditText
+        android:id="@+id/captionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="@string/caption"
+        android:textColor="#ffffffff"
+        app:layout_constraintBottom_toTopOf="@+id/startButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/introMessage"
         />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="104dp"
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="52dp"/>
+        android:background="#80ffffff"
+        android:text="@string/start_questions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 </android.support.constraint.ConstraintLayout>

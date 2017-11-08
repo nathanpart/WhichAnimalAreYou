@@ -1,4 +1,4 @@
-package partridge.nathan.whichanimalareyou.ui;
+package partridge.nathan.whichanimalareyou.ui.activities;
 
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;

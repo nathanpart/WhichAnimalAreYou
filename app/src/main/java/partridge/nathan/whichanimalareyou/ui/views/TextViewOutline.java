@@ -1,4 +1,4 @@
-package partridge.nathan.whichanimalareyou;
+package partridge.nathan.whichanimalareyou.ui.views;
 
 // Support drawing an outline around text to allow contrast with background.
 // Based on an example by YGHM on stackoverflow.
@@ -10,6 +10,8 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+
+import partridge.nathan.whichanimalareyou.R;
 
 
 public class TextViewOutline extends android.support.v7.widget.AppCompatTextView {
