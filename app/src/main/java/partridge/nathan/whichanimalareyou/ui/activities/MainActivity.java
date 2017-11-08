@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         critterIndex = 0;
         youAreResults = new CharacterArray(this);
-        final ImageView image = (ImageView) findViewById(R.id.imageView);
+        final ImageView image = (ImageView) findViewById(R.id.characterImage);
         image.setImageDrawable(youAreResults.getCharacterDrawable(critterIndex));
         image.setOnClickListener(new View.OnClickListener() {
             @Override
