@@ -6,5 +6,8 @@
     <string name="play_again">play again</string>
     <string name="next">Next</string>
     <string name="back">Back</string>
+    <string name="caption_text">Caption</string>
+    <string name="the_character">the_character</string>
+    <string name="question_page">Question %d of %d</string>
 
 </resources>

@@ -11,8 +11,9 @@
 
     <ImageView
         android:id="@+id/characterImage"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
         android:src="@drawable/bear"
         android:tint="#D018b64a"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,7 +21,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         tools:ignore="ContentDescription"/>
 
     <TextView
@@ -41,24 +41,25 @@
 
     <EditText
         android:id="@+id/captionText"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:hint="@string/caption"
         android:inputType="text"
+        android:maxLength="80"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:text="@string/caption"
         android:textColor="#ffffffff"
+        android:textColorHint="#80ffffff"
         app:layout_constraintBottom_toTopOf="@+id/startButton"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/introMessage"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/introMessage"/>
 
     <Button
         android:id="@+id/startButton"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="#80ffffff"
         android:text="@string/start_questions"

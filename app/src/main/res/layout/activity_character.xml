@@ -10,17 +10,30 @@
 
     <ImageView
         android:id="@+id/characterImage"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/bear"
+        android:adjustViewBounds="true"
 
+        android:scaleType="fitXY"
+        android:src="@drawable/bear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         tools:ignore="ContentDescription"/>
+
+
+    <Button
+        android:id="@+id/speakAgain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#80ffffff"
+        android:text="Talk"
+        app:layout_constraintBottom_toTopOf="@+id/playAgain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
     <Button
         android:id="@+id/playAgain"
@@ -36,9 +49,9 @@
         android:id="@+id/captionText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="340dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
+        android:layout_marginTop="290dp"
         android:textColor="#ffffffff"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
