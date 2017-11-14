@@ -1,4 +1,4 @@
-package partridge.nathan.whichanimalareyou;
+package partridge.nathan.whichanimalareyou.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

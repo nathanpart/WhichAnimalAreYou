@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Which Animal Are You?</string>
-    <string name="intro_msg">Welcome, the answers to the questions will determine which animal you are like, and the animal will be presented with the caption entered below.</string>
+    <string name="intro_msg">Welcome. You will be asked a series of questions to determine which animal you are.  This animal will then be presented speaking the caption entered below.</string>
     <string name="start_questions">Start Questions</string>
     <string name="caption">Caption</string>
     <string name="play_again">play again</string>
@@ -9,5 +9,6 @@
     <string name="caption_text">Caption</string>
     <string name="the_character">the_character</string>
     <string name="question_page">Question %d of %d</string>
+    <string name="mute_message">THIS ANIMAL DOES NOT SPEAK</string>
 
 </resources>

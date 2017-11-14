@@ -1,21 +1,25 @@
 package partridge.nathan.whichanimalareyou.ui.activities;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.Stack;
 
 import partridge.nathan.whichanimalareyou.R;
-import partridge.nathan.whichanimalareyou.SpinAdapter;
+import partridge.nathan.whichanimalareyou.adapters.SpinAdapter;
 import partridge.nathan.whichanimalareyou.model.CharacterArray;
 import partridge.nathan.whichanimalareyou.model.CritterBackground;
 import partridge.nathan.whichanimalareyou.model.QuestionBank;
@@ -32,6 +36,7 @@ public class QuestionsActivity extends AppCompatActivity implements AdapterView.
     private Button mBackButton;
     private Button mNextButton;
 
+
     private SpinAdapter mAdapter;
 
     // Data Models
@@ -42,6 +47,7 @@ public class QuestionsActivity extends AppCompatActivity implements AdapterView.
     // Activity data
     private int mCurrentQuestion;
     private String mCaption;
+    private Stack<Integer> mBackStack = new Stack<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +83,24 @@ public class QuestionsActivity extends AppCompatActivity implements AdapterView.
         upDateActivityView();
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.options_menu, menu);
+        Drawable icon = menu.findItem(R.id.about).getIcon();
+        icon.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.about) {
+            Intent intent = new Intent(this, AboutActivity.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     private void fillAnswerSpinner() {
         if (!mQuestions.isAnserSelected(mCurrentQuestion)) {
             mQuestions.setSelectedAnswer(mCurrentQuestion, 0);
@@ -95,6 +119,7 @@ public class QuestionsActivity extends AppCompatActivity implements AdapterView.
 
 
     private void upDateActivityView() {
+        mBackStack.push(mCurrentQuestion);
         fillAnswerSpinner();
         displayQuestion();
         setBackground();
@@ -120,7 +145,8 @@ public class QuestionsActivity extends AppCompatActivity implements AdapterView.
 
     private void NextButtonClick(View v) {
         mCurrentQuestion++;
-        if (mCurrentQuestion == mQuestions.getNumOfQuestions()) {
+        if (mCurrentQuestion >= mQuestions.getNumOfQuestions()) {
+            mCurrentQuestion = mQuestions.getNumOfQuestions() - 1;
             int character = 0;
             try {
                 character = mQuestions.getCharacter(mCharacters.getNumberOfCharacters());
@@ -135,6 +161,18 @@ public class QuestionsActivity extends AppCompatActivity implements AdapterView.
             intent.putExtra(getString(R.string.the_character), character);
             startActivity(intent);
         } else {
+            upDateActivityView();
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        mBackStack.pop();
+
+        if (mBackStack.isEmpty()) {
+            super.onBackPressed();
+        } else {
+            mCurrentQuestion = mBackStack.pop();
             upDateActivityView();
         }
     }

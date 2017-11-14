@@ -7,15 +7,15 @@ public class Character {
     private String mLabel;
     private Drawable mPictureDrawable;
     private int mSoundId;
-    private double mCaptionLocX;
-    private double mCaptionLocY;
+    private int mCaptionMargin;
+    private int mCaptionGravity;
 
-    public Character(String label, Drawable pictureDrawable, int soundId, double captionLocX, double captionLocY) {
+    public Character(String label, Drawable pictureDrawable, int soundId, int captionMargin, int captionGravity) {
         mLabel = label;
         mPictureDrawable = pictureDrawable;
         mSoundId = soundId;
-        mCaptionLocX = captionLocX;
-        mCaptionLocY = captionLocY;
+        mCaptionMargin = captionMargin;
+        mCaptionGravity = captionGravity;
     }
 
     public String getLabel() {
@@ -30,11 +30,11 @@ public class Character {
         return mSoundId;
     }
 
-    public double getCaptionLocX() {
-        return mCaptionLocX;
+    public int getCaptionMargin() {
+        return mCaptionMargin;
     }
 
-    public double getCaptionLocY() {
-        return mCaptionLocY;
+    public int getCaptionGravity() {
+        return mCaptionGravity;
     }
 }

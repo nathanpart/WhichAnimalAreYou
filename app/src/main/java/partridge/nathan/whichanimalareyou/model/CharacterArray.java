@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
+import android.view.Gravity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,11 +29,31 @@ public class CharacterArray {
             String label = itemArray.getString(0);
             @SuppressLint("ResourceType") Drawable image = itemArray.getDrawable(1);
             @SuppressLint("ResourceType") int sound = itemArray.getResourceId(2, 0);
-            @SuppressLint("ResourceType") double xLoc = itemArray.getDimension(3, 0);
-            @SuppressLint("ResourceType") double yLoc = itemArray.getDimension(4, 0);
+            @SuppressLint("ResourceType") double margin = itemArray.getDimension(3, 0);
+            @SuppressLint("ResourceType") String gravityStr = itemArray.getString(4);
             itemArray.recycle();
 
-            Character item = new Character(label, image, sound, xLoc, yLoc);
+            // Convert caption gravity string to gravity constants
+            int gravity;
+            switch ((gravityStr == null) ? "left" : gravityStr) {
+                case "left":
+                    gravity = Gravity.LEFT;
+                    break;
+
+                case "center":
+                    gravity = Gravity.CENTER_HORIZONTAL;
+                    break;
+
+                case "right":
+                    gravity = Gravity.RIGHT;
+                    break;
+
+                default:
+                    gravity = Gravity.LEFT;
+                    break;
+            }
+
+            Character item = new Character(label, image, sound, (int) Math.round(margin), gravity);
             mCharacters.add(item);
         }
 
@@ -52,12 +73,13 @@ public class CharacterArray {
         return mCharacters.get(resultItem).getLabel();
     }
 
-    public double getCaptionX(int resultItem) {
-        return mCharacters.get(resultItem).getCaptionLocX();
+
+    public int getMargin(int resultItem) {
+        return mCharacters.get(resultItem).getCaptionMargin();
     }
 
-    public double getCaptionY(int resultItem) {
-        return mCharacters.get(resultItem).getCaptionLocY();
+    public int getGravity(int resultItem) {
+        return mCharacters.get(resultItem).getCaptionGravity();
     }
 
     public int getNumberOfCharacters() {
